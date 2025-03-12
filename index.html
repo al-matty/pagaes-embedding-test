@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aha, look at that</title>
+  </head>
+
+  <body>
+    <h1>Embedding Example</h1>
+    <h2>Say what?</h2>
+
+    <fieldset>
+      <legend>Filter the view</legend>
+      <input
+        type="button"
+        value="Oregon and Washington only"
+        id="oregon_and_washington"
+      />
+      <input type="button" value="Clear Filter" id="clear_filter" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
+
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+
+    <div>
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+        toolbar="bottom"
+        hide-tabs
+      >
+      </tableau-viz>
+    </div>
+
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+
+    <script>
+      src = "./app.js";
+    </script>
+    <!-- 
+    <div>
+      This is a div, like a box. A block element that goes on top of other divs.
+    </div>
+    
+    <p>And this is a paragraph</p>
+    <span>this is a span element (inline elements that go side by side)</span>
+
+    <article>This is an article.</article>
+    -->
+  </body>
+</html>
